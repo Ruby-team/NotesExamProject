@@ -1,0 +1,36 @@
+<div class="text-center">
+<%= form_for :activity, url: activities_path do |f| %>
+
+    <% if @activity.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@activity.errors.count, "error") %> appears:
+          </h2>
+
+          <p>
+            <% @activity.errors.full_messages.each do |msg| %>
+                <span class="label label-danger"><%= msg %></span>
+            <% end %>
+          </p>
+
+        </div>
+    <% end %>
+
+    <p>
+      <%= f.label :Name %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :Description %><br>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
+
+  <h4><span class="label label-default"><%= link_to 'Back', activities_path %></span></h4>
+</div>

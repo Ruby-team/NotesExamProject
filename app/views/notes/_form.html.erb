@@ -1,0 +1,18 @@
+<h2>Add a note:</h2>
+<%= simple_form_for([@activity, @activity.notes.build]) do |f| %>
+
+
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title%>
+    </p>
+    <p>
+      <%= f.label :annotation %><br>
+      <%= f.text_area :annotation %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

@@ -1,0 +1,47 @@
+<div class="well text-center">
+  <p>
+    <strong>Activity name:</strong>
+    <%= @activity.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @activity.description %>
+  </p>
+</div>
+
+
+<div class="container text-center">
+
+  <div class="text-center">
+      <h2>Notes</h2>
+    <div class="row">
+      <% @activity.notes.each do |note| %>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+
+            <strong>Title</strong>
+              <div class="panel-heading"><%= note.title %></div>
+
+
+
+            <strong>Note:</strong>
+              <div class="panel-body"><%= note.annotation %></div>
+
+
+
+              <div class="panel-footer"><%= link_to 'Remove', [note.activity, note],
+                        method: :delete,
+                                                    data: { confirm: 'Are you sure?' } %></div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+
+  <%= render 'notes/form' %>
+
+
+    <h3><span class="label label-default"><%= link_to 'Back', activities_path %></span></h3>
+
+  </div>
+</div>
