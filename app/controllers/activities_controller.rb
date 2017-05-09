@@ -1,6 +1,9 @@
 class ActivitiesController < ApplicationController
+
+
+  before_action :authenticate_model!, except: [:index, :show]
   def index
-    @activities = Activity.all
+    @activities = Activity.page(params[:page]).per(7)
   end
 
   def edit
@@ -9,6 +12,8 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+
+    @all_files = @activity.filees
   end
 
   def new

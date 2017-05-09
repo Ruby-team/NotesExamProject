@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+
+  before_action :authenticate_model!, except: [:index, :show]
   def create
     @activity = Activity.find(params[:activity_id])
     @note = @activity.notes.create(note_params)

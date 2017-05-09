@@ -14,6 +14,9 @@
 <div class="container text-center">
 
   <div class="text-center">
+    <% @all_files.each do |filee| %>
+        <%= link_to filee.name, filee.attachment_url %>
+    <% end %>
       <h2>Notes</h2>
     <div class="row">
       <% @activity.notes.each do |note| %>
@@ -22,7 +25,6 @@
 
             <strong>Title</strong>
               <div class="panel-heading"><%= note.title %></div>
-
 
 
             <strong>Note:</strong>
@@ -39,6 +41,7 @@
     </div>
 
   <%= render 'notes/form' %>
+    <%= render 'filees/form' %>
 
 
     <h3><span class="label label-default"><%= link_to 'Back', activities_path %></span></h3>

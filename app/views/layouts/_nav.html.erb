@@ -8,17 +8,36 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">NoteManager</a>
+     <a class="navbar-brand" href='/'><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; NoteManager</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/activities">Lista zajec</a></li>
+        <li><a href="/activities"></i>Activities</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/jodanpotasu/CrudRails">link do githuba</a></li>
+        <div class="pull-right">
+                <% if model_signed_in? %>
+                <ul class="navbar-text">
+                    <i class="fa fa-user fa-fw"></i> <strong><%= current_model.email %></strong>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to 'Edit profile', edit_model_registration_path, :class => 'nav navbar-link' %></li>
+                </ul>
+               <ul class="nav navbar-nav">
+                   <li><%= link_to "Logout", destroy_model_session_path, method: :delete, :class => 'nav navbar-link'  %></li>
+               </ul>
+                <% else %>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to "Sign up", new_model_registration_path, :class => 'nav navbar-link'  %></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to "Login", new_model_session_path, :class => 'nav navbar-link'  %></li>
+                </ul>
+                <% end %>
+              </div>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -1,25 +1,29 @@
 
-<h1>Lista activities</h1>
-<h3><span class="label label-default"><%= link_to 'New activity', new_activity_path, class:"" %></span></h3>
+<h1>List of Activities&nbsp; <%= link_to '', new_activity_path, class:"green fa fa-plus-square" %></h1>
 
-
-<table class="table table-striped">
+<table class="table text-left">
   <tr>
     <th>Name</th>
     <th>Description</th>
     <th></th>
-    <th>Options</th>
     <th></th>
   </tr>
   <% @activities.each do |activity| %>
       <tr>
-        <td><%= activity.title %></td>
+        <td><%= link_to activity.title, activity_path(activity), class: "path" %></td>
         <td><%= activity.description %></td>
-        <td><%= link_to 'Notes', activity_path(activity) %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Remove', activity_path(activity),
+        <td><%= link_to '', edit_activity_path(activity), class: "edit fa fa-pencil" %></td>
+        <td><%= link_to '', activity_path(activity),
                         method: :delete,
-                        data: { confirm: 'You sure?' } %></td>
+                        data: { confirm: 'Are you sure to delete "' + activity.title + '"?' }, :class => 'red fa fa-remove' %></td>
       </tr>
   <% end %>
 </table>
+
+<div class="apple_pagination">
+    <div class="page_info">
+      <%= paginate @activities %>
+    </div>
+    <%= page_entries_info @activities %>
+</div>
+<br>
