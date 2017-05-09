@@ -1,8 +1,27 @@
 <div class="container">
 <h1>Welcome to the NoteManager!</h1>
-<h3>Here are some of the most popular activities: </h3>
-<p>activity</p>
-<p>activity</p>
-<p>activity</p>
-<p>activity</p>
+<div class="left">
+<h3 class="text-center">Here are some of the most recent activities: </h3>
+<ul>
+<% @activities.each do |ac| %>
+<li><%= link_to ac.title, activity_path(ac), class: "path" %></li>
+<% end %>
+</ul>
+</div>
+<div class="right">
+<h3 class="text-center">Most recently added notes: </h3>
+<% @notes.each do |note| %>
+<div class="col-md-3">
+  <div class="panel panel-default">
+
+  <strong>Title</strong>
+    <div class="panel-heading"><%= note.title %></div>
+
+
+  <strong>Note:</strong>
+    <div class="panel-body"><%= note.annotation %></div>
+  </div>
+</div>
+<% end %>
+</div>
 </div>
