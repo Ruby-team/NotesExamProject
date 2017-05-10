@@ -1,6 +1,5 @@
 class ActivitiesController < ApplicationController
 
-
   before_action :authenticate_model!, except: [:index, :show]
   def index
     @activities = Activity.page(params[:page]).per(7)
@@ -22,7 +21,6 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
-
     if @activity.save
       redirect_to @activity
     else
@@ -32,7 +30,6 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
-
     if @activity.update(activity_params)
       redirect_to @activity
     else

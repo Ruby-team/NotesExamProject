@@ -1,11 +1,11 @@
-
+<div class="form-group" style="width: 70%;">
 <%= form_for([@activity, @activity.filees.build], html: { multipart: true }) do |f| %>
 
     <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :attachment %>
-    <%= f.file_field :attachment %>
+    <%= f.text_field :name, :class => 'form-control' %>
+    <%= f.file_field :attachment, :class => 'btn' %>
     <p>
-      <%= f.submit %>
+      <%= f.submit "Save", :class => 'btn btn-success' %>
     </p>
 <% end %>
+</div>

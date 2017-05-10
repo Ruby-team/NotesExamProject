@@ -34,10 +34,15 @@ $red: #FF6666;
   color:darken($red, 5%);
   text-decoration: none;
 }
-.red:hover{
+.red:hover, .red-small:hover{
   color: darken($red, 20%);
   text-decoration: none;
   font-weight: bolder;
+}
+.red-small, .red-small::after, .red-small:visited, .red-small:active{
+  font-size: 15px;
+  color:darken($red, 5%);
+  text-decoration: none;
 }
 
 $blue: #3399FF;
@@ -64,6 +69,17 @@ text-align: left;
 .right{
   float: right;
   width: 75%;
+}
+.right20{
+  float: right;
+  width: 25%;
+  background-color: darken(white, 5%);
+  border-top-left-radius: 15px;
+  text-align: left;
+}
+.left80{
+float: left;
+width: 75%;
 }
 .cen{
   margin: 10px auto;

@@ -1,18 +1,32 @@
-<h2>Add a note:</h2>
-<%= simple_form_for([@activity, @activity.notes.build]) do |f| %>
+<h2>Note:</h2>
+<%= simple_form_for([@activity, @note]) do |f| %>
+<% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@note.errors.count, "error") %> appears:
+      </h2>
 
+      <p>
+        <% @note.errors.full_messages.each do |msg| %>
+            <span class="label label-danger"><%= msg %></span>
+        <% end %>
+      </p>
 
-
+    </div>
+<% end %>
+<div class="form-group cen text-center" style="width: 50%;">
     <p>
       <%= f.label :title %><br>
-      <%= f.text_field :title%>
+      <%= f.text_field :title, :class => 'form-control'%>
     </p>
     <p>
       <%= f.label :annotation %><br>
-      <%= f.text_area :annotation %>
+      <%= f.text_area :annotation, :class => 'form-control' %>
     </p>
 
     <p>
-      <%= f.submit %>
+        <%= f.submit "Save", :class => 'btn btn-success' %>
     </p>
+</div>
 <% end %>
+<h3 style="text-align: left;"><%= link_to 'Back', :back, :class => 'btn btn-default' %></h3>

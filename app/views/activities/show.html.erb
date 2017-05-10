@@ -1,23 +1,33 @@
 <div class="well text-center">
-  <p>
-    <strong>Activity name:</strong>
+  <h1>
     <%= @activity.title %>
-  </p>
+    <%= link_to '', edit_activity_path(@activity), class: "edit fa fa-pencil" %>
+    <%= link_to '', activity_path(@activity),
+                    method: :delete,
+                    data: { confirm: 'Are you sure to delete "' + @activity.title + '"?' }, :class => 'red fa fa-remove' %>
+  </h1>
 
-  <p>
-    <strong>Description:</strong>
+  <h5>
     <%= @activity.description %>
-  </p>
+  </h5>
 </div>
-
-
 <div class="container text-center">
 
   <div class="text-center">
+    <div class="right20">
+      <h2 class="text-center">Files</h2>
+      <ul>
     <% @all_files.each do |filee| %>
-        <%= link_to filee.name, filee.attachment_url %>
+        <li><%= link_to filee.name, filee.attachment_url, class: "path" %>
+          <%= link_to '', [filee.activity, filee],
+          method: :delete,
+          data: { confirm: 'Are you sure to delete "' + filee.name + '"?' }, :class => 'red-small fa fa-remove' %></li>
     <% end %>
-      <h2>Notes</h2>
+    <li><%= render 'filees/form' %></li>
+  </ul>
+  </div>
+  <div class="left80">
+    <h2>Notes&nbsp; <%= link_to '', new_activity_note_path(@activity), class:"green fa fa-plus-square" %></h2>
     <div class="row">
       <% @activity.notes.each do |note| %>
           <div class="col-md-3">
@@ -32,19 +42,17 @@
 
 
 
-              <div class="panel-footer"><%= link_to 'Remove', [note.activity, note],
-                        method: :delete,
-                                                    data: { confirm: 'Are you sure?' } %></div>
+              <div class="panel-footer">
+                              <%= link_to '', edit_activity_note_path(@activity,note), class: "edit fa fa-pencil" %>
+                              <%= link_to '', [note.activity, note],
+                              method: :delete,
+                              data: { confirm: 'Are you sure to delete "' + note.title + '"?' }, :class => 'red fa fa-remove' %></div>
             </div>
           </div>
       <% end %>
     </div>
-
-  <%= render 'notes/form' %>
-    <%= render 'filees/form' %>
-
-
-    <h3><span class="label label-default"><%= link_to 'Back', activities_path %></span></h3>
+</div>
+    <h3 style="text-align: left;"><%= link_to 'Back', :back, :class => 'btn btn-default' %></h3>
 
   </div>
 </div>

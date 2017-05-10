@@ -1,5 +1,5 @@
 <div class="text-center">
-<%= form_for :activity, url: activities_path do |f| %>
+<%= form_for @activity do |f| %>
 
     <% if @activity.errors.any? %>
         <div id="error_explanation">
@@ -15,22 +15,21 @@
 
         </div>
     <% end %>
-
+<div class="form-group cen text-center" style="width: 50%;">
     <p>
       <%= f.label :Name %><br>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, :class => 'form-control' %>
     </p>
 
     <p>
       <%= f.label :Description %><br>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, :class => 'form-control' %>
     </p>
 
     <p>
-      <%= f.submit %>
+      <%= f.submit "Save", :class => 'btn btn-success' %>
     </p>
 
-<% end %>
-
-  <h4><span class="label label-default"><%= link_to 'Back', activities_path %></span></h4>
-</div>
+  </div>
+  <% end %>
+  <h3 style="text-align: left;"><%= link_to 'Back', :back, :class => 'btn btn-default' %></h3>
