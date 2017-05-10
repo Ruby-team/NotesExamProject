@@ -1,15 +1,28 @@
 <h2>Log in</h2>
+<div class="container cen text-center">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+<div class="form-group cen text-center" style="width: 50%;">
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, autofocus: true, :class => 'form-control' %>
+  </p>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
+    <%= render "devise/shared/links" %>
+  </p>
+
+  <% if devise_mapping.rememberable? -%>
+    <p>
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </p>
+  <% end -%>
+
+    <%= f.submit "Log in", :class => 'btn btn-success' %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>

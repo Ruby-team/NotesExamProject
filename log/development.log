@@ -21651,3 +21651,818 @@ Processing by MainController#index as HTML
 Completed 200 OK in 115ms (Views: 101.4ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:11:03 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (6.6ms)
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 111ms (Views: 100.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:11:06 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     7: </h2>
+     8: <div class="container cen">
+     9: <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    10: <% if @user.errors.any? %>
+    11:   <div class="text-danger">
+    12:     <ul>
+    13:       <% @user.errors.full_messages.each do |msg| %>
+  
+app/views/devise/registrations/edit.html.erb:10:in `block in _app_views_devise_registrations_edit_html_erb__3305525317852132380_70212316940060'
+app/views/devise/registrations/edit.html.erb:9:in `_app_views_devise_registrations_edit_html_erb__3305525317852132380_70212316940060'
+  Rendering /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:11:09 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (2.3ms)
+  [1m[36mModel Load (0.1ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:14:12 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (1.8ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (7.4ms)
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 101ms (Views: 89.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:14:14 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (3.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (2.6ms)
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 65ms (Views: 54.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:14:14 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (3.9ms)
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 98ms (Views: 90.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:14:16 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (1.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:14:26 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.8ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:14:40 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:14:42 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:14:43 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (2.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (4.2ms)
+  [1m[36mModel Load (0.1ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 84ms (Views: 69.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:14:45 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:14:47 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.9ms)
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:16:24 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.4ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/models/sign_out" for 127.0.0.1 at 2017-05-16 23:16:32 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a3IwgYRrH7NwMzrYLpLLUHYazlND9727axBZBauJk9QtvbH95CpfvnLVTDnhKMLhD4gdXgGNK4GYHX2uIKrTTQ=="}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:16:32 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 83ms (Views: 71.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:16:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2017-05-16 23:16:36 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 95ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:11 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 117ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 116ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 129ms (Views: 126.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:15 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 1591ms (Views: 1590.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 86ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:19:35 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 60ms (Views: 53.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2017-05-16 23:19:36 +0200
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  Rendered activities/index.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:19:37 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:19:38 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:51 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 1576ms (Views: 1573.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:19:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (405.7ms)
+  Rendered layouts/_nav.html.erb (1.4ms)
+Completed 200 OK in 700ms (Views: 677.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:20:00 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 160ms (Views: 86.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:20:02 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:20:02 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:20:19 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:20:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 127ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:20:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:20:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 134ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 148ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 136ms (Views: 132.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:46 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 91ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:21:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:22:04 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:22:06 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 1819ms (Views: 1817.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 1608ms (Views: 1607.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:23:45 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:23:46 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2017-05-16 23:23:48 +0200
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  Rendered activities/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:23:48 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 71.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2017-05-16 23:23:49 +0200
+Processing by ActivitiesController#index as HTML
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" LIMIT ? OFFSET ?[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  Rendered activities/index.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 110ms (Views: 104.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:23:50 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:23:51 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 168ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:23:52 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 123ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:23:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2017-05-16 23:27:07 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (340.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+Completed 200 OK in 601ms (Views: 577.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/models/sign_up" for 127.0.0.1 at 2017-05-16 23:27:09 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 149ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models" for 127.0.0.1 at 2017-05-16 23:27:19 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9vrSU2Brt55t6q3GnynVZnnN9D8u2RzvyuwFm2vW4lMMTwrBKqVCZlwL2pZVAlFykRJhaq1EAv6NlLHqBlyy+A==", "model"=>{"email"=>"damonaify@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mModel Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "models" WHERE "models"."email" = ? LIMIT ?[0m  [["email", "damonaify@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "models" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "damonaify@gmail.com"], ["encrypted_password", "$2a$11$3amtiFiRXrlAU9BPQr9uD.rWYoEV0gcA2vKfLk2bhBTehn6of1IKq"], ["created_at", 2017-05-16 21:27:19 UTC], ["updated_at", 2017-05-16 21:27:19 UTC]]
+  [1m[35m (1567.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "models" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "models"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-16 21:27:20 UTC], ["last_sign_in_at", 2017-05-16 21:27:20 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-05-16 21:27:20 UTC], ["id", 3]]
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1829ms (ActiveRecord: 1631.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:27:20 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.7ms)
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 70ms (Views: 45.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:27:23 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:28:02 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:28:17 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.7ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 104ms (Views: 97.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/models/edit" for 127.0.0.1 at 2017-05-16 23:28:33 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/models/sign_out" for 127.0.0.1 at 2017-05-16 23:28:37 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xi9UhdFn0RM1ewdztJYg0fZH45FioW9n7uW8vUnrnOMq3pwVc/j9eWN0yJHj39GLd6NhNnFu+XDCLZWYOpCuEA=="}
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."id" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 23:28:37 +0200
+Processing by MainController#index as HTML
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" ORDER BY "activities"."id" DESC LIMIT ?[0m  [["LIMIT", 15]]
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:28:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2017-05-16 23:28:40 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/models/password" for 127.0.0.1 at 2017-05-16 23:28:43 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jy78xVbNEWJFGqWAVEuRZyABkUyUMWB0LonFQKWt/EYq6VEOoEQHIJX2lK4wz3kWyzd0meCE2/YioqCiH9yYJQ==", "model"=>{"email"=>"damonaify@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."email" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["email", "damonaify@gmail.com"], ["LIMIT", 1]]
+  [1m[36mModel Load (0.2ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."reset_password_token" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["reset_password_token", "81b2d0b57490940dca86e92644701a0f9b5cc755bf4067614da4e1dec9062e3f"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "models" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "models"."id" = ?[0m  [["reset_password_token", "81b2d0b57490940dca86e92644701a0f9b5cc755bf4067614da4e1dec9062e3f"], ["reset_password_sent_at", 2017-05-16 21:28:43 UTC], ["updated_at", 2017-05-16 21:28:43 UTC], ["id", 3]]
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (2.3ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 438.2ms
+Sent mail to damonaify@gmail.com (3443.0ms)
+Date: Tue, 16 May 2017 23:28:44 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: damonaify@gmail.com
+Message-ID: <591b6f0c4f238_7cfe208102c673de@Sherry-Wolf.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello damonaify@gmail.com!</p>
+<div class="container cen text-center">
+  <div class="form-group cen text-center" style="width: 50%;">
+    <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+    <p><a class="btn btn-success" href="http://sheltered-depths-28406.herokuapp.com/models/password/edit?reset_password_token=GMpZttvKwzJzx-9tSzzy">Change my password</a></p>
+
+    <p>If you didn't request this, please ignore this email.</p>
+    <p>Your password won't change until you access the link above and create a new one.</p>
+  </div>
+</div>
+
+Redirected to http://localhost:3000/models/sign_in
+Completed 302 Found in 4322ms (ActiveRecord: 69.4ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:28:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/password/new" for 127.0.0.1 at 2017-05-16 23:31:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (335.9ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 561ms (Views: 543.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/models/password" for 127.0.0.1 at 2017-05-16 23:31:07 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UNfmoJgtmedCxRSvBZRRXDpbPDLAsgvV1qAFed0U+Vn1EEtrbqSPpZIpJYFhELkt0W3Z57QHsFfai2CbZ2WdOg==", "model"=>{"email"=>"damonaify@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mModel Load (0.3ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."email" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["email", "damonaify@gmail.com"], ["LIMIT", 1]]
+  [1m[36mModel Load (0.1ms)[0m  [1m[34mSELECT  "models".* FROM "models" WHERE "models"."reset_password_token" = ? ORDER BY "models"."id" ASC LIMIT ?[0m  [["reset_password_token", "674830405f8827d8fc8637e65b9fa3c884fa787741fa11ed7d4ce889aa6ff0b2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "models" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "models"."id" = ?[0m  [["reset_password_token", "674830405f8827d8fc8637e65b9fa3c884fa787741fa11ed7d4ce889aa6ff0b2"], ["reset_password_sent_at", 2017-05-16 21:31:07 UTC], ["updated_at", 2017-05-16 21:31:07 UTC], ["id", 3]]
+  [1m[35m (208.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (2.1ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 165.5ms
+Sent mail to damonaify@gmail.com (2094.3ms)
+Date: Tue, 16 May 2017 23:31:07 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: damonaify@gmail.com
+Message-ID: <591b6f9b97336_7e4e23e8ad0235d0@Sherry-Wolf.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello damonaify@gmail.com!</p>
+<div class="container cen text-center">
+  <div class="form-group cen text-center" style="width: 50%;">
+    <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+    <p><a class="btn btn-success" href="http://localhost:3000/models/password/edit?reset_password_token=fG4MqgB1LeAzVNHEL6Kz">Change my password</a></p>
+
+    <p>If you didn't request this, please ignore this email.</p>
+    <p>Your password won't change until you access the link above and create a new one.</p>
+  </div>
+</div>
+
+Redirected to http://localhost:3000/models/sign_in
+Completed 302 Found in 2711ms (ActiveRecord: 209.6ms)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2017-05-16 23:31:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/models/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2017-05-16 23:31:26 +0200
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/passwords/edit.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
