@@ -12,9 +12,9 @@
   </h5>
 </div>
 <div class="container text-center">
-
+<div class="row">
   <div class="text-center">
-    <div class="right20">
+    <div class="left col-md-4 col-sm-12">
       <h2 class="text-center">Files</h2>
       <ul>
     <% @all_files.each do |filee| %>
@@ -23,11 +23,11 @@
           method: :delete,
           data: { confirm: 'Are you sure to delete "' + filee.name + '"?' }, :class => 'red-small fa fa-remove' %></li>
     <% end %>
-    <li><%= render 'filees/form' %></li>
+    <%= render 'filees/form' %>
   </ul>
   </div>
-  <div class="left80">
-    <h2>Notes&nbsp; <%= link_to '', new_activity_note_path(@activity), class:"green fa fa-plus-square" %></h2>
+  <div class="col-md-8 col-sm-12">
+    <h2 class="left">Notes&nbsp; <%= link_to '', new_activity_note_path(@activity), class:"green fa fa-plus-square" %></h2>
     <div class="row">
       <% @activity.notes.each do |note| %>
           <div class="col-md-3">
@@ -55,4 +55,5 @@
     <h3 style="text-align: left;"><%= link_to 'Back', :back, :class => 'btn btn-default' %></h3>
 
   </div>
+</div>
 </div>

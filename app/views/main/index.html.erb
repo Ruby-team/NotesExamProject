@@ -1,6 +1,7 @@
 <div class="container">
+  <div class="row">
 <h1>Welcome to the NoteManager!</h1>
-<div class="left">
+<div class="left col-md-3 col-sm-12">
 <h3 class="text-center">Here are some of the most recent activities: </h3>
 <ul>
 <% @activities.each do |ac| %>
@@ -8,7 +9,7 @@
 <% end %>
 </ul>
 </div>
-<div class="right">
+<div class="col-md-9 col-sm-12">
 <h3 class="text-center">Most recently added notes: </h3>
 <% @notes.each do |note| %>
 <div class="col-md-3">
@@ -24,4 +25,5 @@
 </div>
 <% end %>
 </div>
+  </div>
 </div>
