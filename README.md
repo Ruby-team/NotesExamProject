@@ -3,7 +3,7 @@
 | :-------------: |:-------------:| :--------:|:-----:|
 | 2.4.0 | 5.0.2 | PostgreSQL - 9.6, Sqlite(lokalnie) | Bootstrap, faker, simpleform, devise, carriewave, kaminari, font-awesome |
 ## Temat:
-*Aplikacja służąca do zarządzania notatkami dla poszczególnych zajęc. Użytkownik ma możliwość utworzenia 'folderu' dla swoich zajęc, a w nim dodawania notatek z poszczególnych lekcji.*
+*Aplikacja służąca do zarządzania notatkami dla poszczególnych zajęć. Użytkownik ma możliwość utworzenia 'folderu' dla swoich zajęć, a w nim dodawania notatek z poszczególnych lekcji. Do każdych zajęć użytkownik może załączyć pliki. Jest to bardzo użyteczna i pomocna aplikacja dla studentów i uczniów. Pomaga w zarządzaniu swoimi materiałami z poszczególnych przedmiotów i dzięki temu student ma wszystko w jednym miejscu i nauka staje się prostsza. *
 
 ## gemy
 * faker - gem służący do generowania fałszywch encji do bazy danych.
